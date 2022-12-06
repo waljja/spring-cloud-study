@@ -1,4 +1,4 @@
-package com.example.springcloudapicommons.pojo;
+package com.example.apicommons.pojo;
 
 /**
  * 返回信息枚举

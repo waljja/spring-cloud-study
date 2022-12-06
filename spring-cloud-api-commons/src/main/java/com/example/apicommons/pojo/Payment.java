@@ -1,4 +1,4 @@
-package com.example.springcloudapicommons.pojo;
+package com.example.apicommons.pojo;
 
 import lombok.Getter;
 import lombok.Setter;
