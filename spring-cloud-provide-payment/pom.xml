@@ -33,6 +33,18 @@
             <artifactId>spring-cloud-api-commons</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!-- Javax 校验 -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+        <!-- hibernate 校验 -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.0.18.Final</version>
+        </dependency>
         <!-- druid 数据库连接池 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -56,6 +68,13 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!-- swagger2 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -84,5 +103,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

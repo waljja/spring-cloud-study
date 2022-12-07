@@ -1,4 +1,4 @@
-package com.example.apicommons.pojo;
+package com.example.apicommons.entity;
 
 /**
  * 返回信息接口
