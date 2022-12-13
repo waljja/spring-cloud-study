@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
@@ -14,7 +15,8 @@ import org.springframework.web.client.RestTemplate;
  * @date 2022-12-8
  */
 @Slf4j
-@RestController(value = "/consumer")
+@RestController
+@RequestMapping(value = "/consumer")
 public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
@@ -30,7 +32,7 @@ public class OrderController {
      */
     @GetMapping("/payment/create")
     public CommonResult<Payment> create(Payment payment) {
-        return restTemplate.postForObject(PAYMENT_URL + "/payment/create", payment, CommonResult.class);
+        return restTemplate.postForObject(PAYMENT_URL + "/payment/create/", payment, CommonResult.class);
     }
 
     /**
@@ -41,6 +43,7 @@ public class OrderController {
      */
     @GetMapping("/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
-        return restTemplate.getForObject(PAYMENT_URL + "/payment/get" + id, CommonResult.class);
+        System.out.println(PAYMENT_URL + "/payment/get/" + id);
+        return restTemplate.getForObject(PAYMENT_URL + "/payment/get/" + id, CommonResult.class);
     }
 }

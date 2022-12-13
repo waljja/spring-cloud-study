@@ -5,14 +5,19 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
+
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
  *
  * @TableName payment
+ * @author 丁国钊
+ * @date 2022-12-8
  */
-@TableName(value ="payment")
 @Data
+@AllArgsConstructor
+@TableName(value ="payment")
 public class Payment implements Serializable {
     /**
      *

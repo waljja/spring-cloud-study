@@ -1,6 +1,7 @@
 package com.example.apicommons.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -11,6 +12,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
+@NoArgsConstructor
 public class CommonResult<T> {
     private Integer code;
     private String message;
