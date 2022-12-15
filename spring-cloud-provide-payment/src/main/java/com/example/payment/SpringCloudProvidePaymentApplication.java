@@ -1,5 +1,6 @@
 package com.example.payment;
 
+import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +13,7 @@ import java.util.concurrent.TimeUnit;
  * @author 丁国钊
  * @date 2022-12-7
  */
+@EnableDubbo
 @SpringBootApplication
 @EnableDiscoveryClient
 @MapperScan("com.example.payment.mapper")
