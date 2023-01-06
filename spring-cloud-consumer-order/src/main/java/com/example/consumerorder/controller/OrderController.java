@@ -27,6 +27,11 @@ public class OrderController {
     @DubboReference
     DubboApiService dubboApiService;
 
+    @GetMapping("/payment/test")
+    public CommonResult<Payment> test() {
+        return new CommonResult<>(200, "spring cloud gateway 测试成功", null);
+    }
+
     /**
      * 创建支付订单
      *
@@ -46,6 +51,8 @@ public class OrderController {
      */
     @GetMapping("/payment/get/{id}")
     public CommonResult<Payment> getPayment(@PathVariable("id") Long id) {
+        System.out.println(dubboApiService.getPayment(id));
+
         return dubboApiService.getPayment(id);
     }
 }

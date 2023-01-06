@@ -21,7 +21,7 @@ public interface PaymentFeignService {
      * @return
      */
     @GetMapping("/payment/create")
-    public CommonResult<Payment> create(Payment payment);
+    CommonResult<Payment> create(Payment payment);
 
     /**
      * 获取支付订单
@@ -30,5 +30,5 @@ public interface PaymentFeignService {
      * @return
      */
     @GetMapping("/payment/get/{id}")
-    public CommonResult<Payment> getPayment(@PathVariable("id") Long id);
+    CommonResult<Payment> getPayment(@PathVariable("id") Long id);
 }
